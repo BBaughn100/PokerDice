@@ -31,16 +31,10 @@ public class PokerDice {
 		boolean answer = true;
 		System.out.print(msg);
 		String userInput = inScanner.nextLine().toUpperCase();
-		while (userInput.length() >= 2 || !(userInput.equals("Y") || userInput.equals("N"))){
+		while (userInput.length() > 1 || !(userInput.equals("Y") || userInput.equals("N"))){
 			System.out.println("ERROR! Only 'Y' and 'N' allowed as input!");
 			System.out.print(msg);
 			userInput = inScanner.nextLine().toUpperCase();
-
-			if (userInput.equals("Y")) {
-				answer = true;
-			} else if (userInput.equals("N")) {
-				answer = false;
-			}
 		}
 		if (userInput.equals("Y")) {
 			answer = true;
@@ -287,12 +281,6 @@ public class PokerDice {
 				System.out.println("ERROR! Only 'Y' and 'N' allowed as input!");
 				System.out.print(msg);
 				userInput = in.nextLine().toUpperCase();
-
-				if (userInput.equals("Y")) {
-					prompt = true;
-				} else {
-					prompt = false;
-				}
 			}
 			if (userInput.equals("Y")) {
 				prompt = true;
